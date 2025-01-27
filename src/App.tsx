@@ -1,4 +1,5 @@
 import Card from './card/card'
+import Carousel from './carusel/carusel'
 import './App.css'
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
                 
                 
         <div className='main'>
-          <Card/>
+          {/* <Card/> */}
 
+          <Carousel/>
         </div>
       </div>
       
