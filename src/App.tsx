@@ -1,5 +1,6 @@
 import Card from './card/card'
 import Carousel from './carousel/carousel'
+import SpecificationsIcebox from './specificationsIcebox/specificationsIcebox'
 import './App.css'
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
                 
         <div className='main'>
           {/* <Card/> */}
-
-          <Carousel/>
+          <SpecificationsIcebox/>
+          {/* <Carousel/> */}
         </div>
       </div>
       

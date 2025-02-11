@@ -33,3 +33,25 @@ button {
 .next {
   right: 10px;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
