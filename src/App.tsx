@@ -1,5 +1,5 @@
 import Card from './card/card'
-import Carousel from './carusel/carusel'
+import Carousel from './carousel/carousel'
 import './App.css'
 
 function App() {

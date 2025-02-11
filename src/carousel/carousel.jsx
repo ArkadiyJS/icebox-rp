@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import './carousel.css'; // Импортируйте стили
+import s from './carousel.module.css'
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,14 +15,14 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel">
-      <div className="carousel-images" style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
+    <div className={s.carousel}>
+      <div className={s.carouselImages} style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
         {images.map((image, index) => (
           <img key={index} src={image} alt={`Image ${index + 1}`} />
         ))}
       </div>
-      <button className="prev" onClick={() => moveSlide(-1)}>&#10094;</button>
-      <button className="next" onClick={() => moveSlide(1)}>&#10095;</button>
+      <button className={s.prev} onClick={() => moveSlide(-1)}>&#10094;</button>
+      <button className={s.next} onClick={() => moveSlide(1)}>&#10095;</button>
     </div>
   );
 };
