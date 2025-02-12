@@ -7,9 +7,10 @@
   grid-template-rows: 150px 1fr;
   grid-template-columns: 200px 1fr;
   grid-template-areas:
-  'h h'
-  'n c';
+    'h h'
+    'n c';
 }
+
 .Header {
   display: flex;
   grid-area: h;
@@ -18,51 +19,56 @@
   align-items: center;
   width: 1200px;
   height: 150px;
-  
+
 }
 
-.Navbar{
- grid-area: n;
-  
+.Navbar {
+  grid-area: n;
+
   width: 200px;
- 
+
 }
 
 
-.Content{
-  
+.Content {
+
   grid-area: c;
- 
+
   width: 100%;
   height: 100%;
-  
+
 }
-li{
+
+li {
   background-color: #302f2f;
   color: #f1f1f1;
   margin-top: 5px;
   border: 1px solid black;
   cursor: pointer;
 }
-.icebox{
- 
+
+.icebox {
+
   display: grid;
   grid-template-columns: 30% 1fr;
-  margin-top:  10px;
+  margin-top: 10px;
   height: 300px;
   width: 100%;
-  
+  color: white;
+
   border: 1.5px solid black;
   border-radius: 4px;
-  
+
 }
+
 /* .h_o img{
   height: 100%;
   width: 100%;
 } */
-.stats  {
+.stats {
   width: 100%;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -82,49 +88,64 @@ th {
 }
 
 tr:hover {
-  background-color: #f1f1f1;
+  background-color: #a89d9d;
 }
 
 .button {
   width: 90%;
-  background-color: #4CAF50; /* Зелёный фон */
-  color: white; /* Белый текст */
-  padding: 15px 32px; /* Отступы по вертикали и горизонтали */
-  text-align: center; /*Выравнивание текста по центру*/
-  text-decoration: none; /* Убираем подчеркивание */
-  display: inline-block; /* Позволяет добавлять отступы и размеры */
-  font-size: 16px; /* Размер шрифта */
-  margin: 4px 2px; /* Отступы вокруг кнопки */
-  transition: background-color 0.3s, transform 0.3s; /* Плавный переход при наведении */
-  border: none; /* Убираем границы */
-  border-radius: 4px; /* Закругленные углы */
+  background-color: #4CAF50;
+  /* Зелёный фон */
+  color: white;
+  /* Белый текст */
+  padding: 15px 32px;
+  /* Отступы по вертикали и горизонтали */
+  text-align: center;
+  /*Выравнивание текста по центру*/
+  text-decoration: none;
+  /* Убираем подчеркивание */
+  display: inline-block;
+  /* Позволяет добавлять отступы и размеры */
+  font-size: 16px;
+  /* Размер шрифта */
+  margin: 4px 2px;
+  /* Отступы вокруг кнопки */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Плавный переход при наведении */
+  border: none;
+  /* Убираем границы */
+  border-radius: 4px;
+  /* Закругленные углы */
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #45a049; /* Более темный зелёный при наведении */
-  transform: translateY(-2px); /* Поднимаем кнопку при наведении */
+  background-color: #45a049;
+  /* Более темный зелёный при наведении */
+  transform: translateY(-2px);
+  /* Поднимаем кнопку при наведении */
 }
 
 .button:active {
-  background-color: #3e8e41; /* Ещё более тёмный цвет при нажатии */
-  transform: translateY(0); /* Возвращаем на место при отпускании */
+  background-color: #3e8e41;
+  /* Ещё более тёмный цвет при нажатии */
+  transform: translateY(0);
+  /* Возвращаем на место при отпускании */
 }
 
 
 
-h2{
-    font-family: 'Arial', sans-serif;
-    font-size: 2em;
-    color: #f3f5f3;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin:  0;
-    padding: 10px;
-    background: linear-gradient(90deg, #72e44f, #4CAF50);
-   
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2em;
+  color: #f3f5f3;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 10px;
+  background: linear-gradient(90deg, #72e44f, #4CAF50);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* .overlay {
@@ -134,12 +155,18 @@ h2{
   right: 0;
   bottom: 0;
   /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 0, 0, 0.5); /* Полупрозрачный фон */
-  color: white;
-  font-size: 24px; /* Размер шрифта */
-  font-weight: bold; /* Жирный шрифт */
-  text-align: center;
-  pointer-events: none; /* Чтобы клики проходили сквозь этот элемент */
-} */
+justify-content: center;
+align-items: center;
+background-color: rgba(255, 0, 0, 0.5);
+/* Полупрозрачный фон */
+color: white;
+font-size: 24px;
+/* Размер шрифта */
+font-weight: bold;
+/* Жирный шрифт */
+text-align: center;
+pointer-events: none;
+/* Чтобы клики проходили сквозь этот элемент */
+}
+
+*/

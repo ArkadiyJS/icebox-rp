@@ -23,30 +23,30 @@ function App() {
         </div>
 
         <div className="Navbar">
-          <h2 style={{ fontFamily: "Arial", fontSize: "1em" }}>
-            
-            Двухдверные 
+          <h2 style={{ fontFamily: "Arial", fontSize: "1em", borderRadius: '4px' }}>
+
+            Двухдверные
           </h2>
 
-          <button className="button" style={{width:'97%'}}>новые</button>
-          <button className="button" style={{width:'97%'}}>б/у</button>
+          <button className="button" style={{ width: '97%' }}>новые</button>
+          <button className="button" style={{ width: '97%' }}>б/у</button>
 
-          <h2 style={{ fontFamily: "Arial", fontSize: "1em" }}>
-            
-            Однодверные 
+          <h2 style={{ fontFamily: "Arial", fontSize: "1em", borderRadius: '4px' }}>
+
+            Однодверные
           </h2>
 
-          <button className="button" style={{width:'97%'}}>новые</button>
-          <button className="button" style={{width:'97%'}}>б/у</button>
+          <button className="button" style={{ width: '97%' }}>новые</button>
+          <button className="button" style={{ width: '97%' }}>б/у</button>
 
-          <h2 style={{ fontFamily: "Arial", fontSize: "1em" }}>
-           Полтора-дверные
+          <h2 style={{ fontFamily: "Arial", fontSize: "1em", borderRadius: '4px' }}>
+            Полтора-дверные
           </h2>
 
-          <button className="button" style={{width:'97%'}}>новые</button>
-          <button className="button" style={{width:'97%'}}>б/у</button>
-          
-<h2></h2>
+          <button className="button" style={{ width: '97%' }}>новые</button>
+          <button className="button" style={{ width: '97%' }}>б/у</button>
+
+          <h2></h2>
           <button
             className="button"
             style={{ padding: "3px 0px 3px 0px" }}
