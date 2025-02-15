@@ -9,17 +9,14 @@ import TableStats from "./tablesStatsIceBox";
 import IceboxCard from "./components/card/iceboxCard";
 
 function App() {
-  const [show1, setShow1] = useState(false);
+
   const [show2, setShow2] = useState(false);
 
   return (
     <>
       <div className="App">
         <div className="Header">
-          <img
-            className="Header1"
-            src="https://avatars.mds.yandex.net/i?id=b716e0a6663a460975f2ddbf849fcd7505476d37-10964795-images-thumbs&n=13"
-          ></img>
+          <h1 className="logo">AinBev Effes</h1>
         </div>
 
         <div className="Navbar">
@@ -28,28 +25,28 @@ function App() {
             Двухдверные
           </h2>
 
-          <button className="button" style={{ width: '97%' }}>новые</button>
-          <button className="button" style={{ width: '97%' }}>б/у</button>
+          <button className="button" style={{ width: '200px' }}>новые</button>
+          <button className="button" style={{ width: '200px' }}>б/у</button>
 
           <h2 style={{ fontFamily: "Arial", fontSize: "1em", borderRadius: '4px' }}>
 
             Однодверные
           </h2>
 
-          <button className="button" style={{ width: '97%' }}>новые</button>
-          <button className="button" style={{ width: '97%' }}>б/у</button>
+          <button className="button" style={{ width: '200px' }}>новые</button>
+          <button className="button" style={{ width: '200px' }}>б/у</button>
 
           <h2 style={{ fontFamily: "Arial", fontSize: "1em", borderRadius: '4px' }}>
             Полтора-дверные
           </h2>
 
-          <button className="button" style={{ width: '97%' }}>новые</button>
-          <button className="button" style={{ width: '97%' }}>б/у</button>
+          <button className="button" style={{ width: '200px' }}>новые</button>
+          <button className="button" style={{ width: '200px' }}>б/у</button>
 
           <h2></h2>
           <button
             className="button"
-            style={{ padding: "3px 0px 3px 0px" }}
+            style={{ padding: "3px 0px 3px 0px", width: '200px' }}
             onClick={() => setShow2(!show2)}
           >
             Таблица размеров Холодильного оборудования

@@ -148,25 +148,8 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* display: flex; */
-justify-content: center;
-align-items: center;
-background-color: rgba(255, 0, 0, 0.5);
-/* Полупрозрачный фон */
-color: white;
-font-size: 24px;
-/* Размер шрифта */
-font-weight: bold;
-/* Жирный шрифт */
-text-align: center;
-pointer-events: none;
-/* Чтобы клики проходили сквозь этот элемент */
+.logo {
+  font-size: 158px;
+  color: #f3d3d3;
+  filter: drop-shadow(3px 3px 10px rgb(92, 181, 63))
 }
-
-*/
