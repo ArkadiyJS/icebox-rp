@@ -32,6 +32,10 @@ const IceboxStats = ({ pickIcebox, setPickIcebox }) => {
       <td>Глубина</td>
       <td> 60</td>
     </tr>
+    <tr>
+      <td>Кол-во полок</td>
+      <td> 4/5 + дно</td>
+    </tr>
 
 
     <button className="button" style={pickIcebox ? { backgroundColor: 'red' } : {}} onClick={() => setPickIcebox(true)} >{pickIcebox ? 'забронирован' : 'забронировать'}</button>

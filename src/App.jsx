@@ -12,6 +12,7 @@ import AddIcebox from "./components/addIcebox/addIcebox";
 function App() {
 
   const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
 
 
   const [pickIcebox, setPickIcebox] = useState(false)
@@ -55,12 +56,23 @@ function App() {
           >
             Таблица размеров Холодильного оборудования
           </button>
+          <h2></h2>
+          <button
+            className="button"
+            style={{ padding: "3px 0px 3px 0px", width: '200px' }}
+            onClick={() => setShow3(!show3)}
+          >
+            добавить холодильник
+          </button>
         </div>
 
         <div className="Content">
 
-          {/* <IceboxCard pickIcebox={pickIcebox} setPickIcebox={setPickIcebox} /> */}
-          <AddIcebox />
+          <IceboxCard pickIcebox={pickIcebox} setPickIcebox={setPickIcebox} />
+
+
+          {show3 ? <AddIcebox /> : ''}
+
 
           {show2 ? (
             <div>

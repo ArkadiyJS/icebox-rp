@@ -51,8 +51,8 @@ li {
 
   display: grid;
   grid-template-columns: 30% 1fr;
-  margin-top: 10px;
-  height: 300px;
+  margin-top: 20px;
+  height: 320px;
   width: 100%;
   color: white;
 
