@@ -7,6 +7,7 @@ import iceboxTwo from "./db/icebox-two";
 
 import TableStats from "./tablesStatsIceBox";
 import IceboxCard from "./components/card/iceboxCard";
+import AddIcebox from "./components/addIcebox/addIcebox";
 
 function App() {
 
@@ -58,7 +59,8 @@ function App() {
 
         <div className="Content">
 
-          <IceboxCard pickIcebox={pickIcebox} setPickIcebox={setPickIcebox} />
+          {/* <IceboxCard pickIcebox={pickIcebox} setPickIcebox={setPickIcebox} /> */}
+          <AddIcebox />
 
           {show2 ? (
             <div>
