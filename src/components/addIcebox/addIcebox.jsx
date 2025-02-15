@@ -42,7 +42,7 @@ function AddIcebox(props) {
 
   }
 
-  return (<div>
+  return (<div className='addIcebox'>
     <form onSubmit={handleSubmit}>
       <input style={{ height: '30px', width: '300px' }}
 
@@ -53,7 +53,7 @@ function AddIcebox(props) {
 
 
       />
-      <label htmlFor="options">выберете модель</label>
+      <label style={{ color: 'white' }} htmlFor="options">выберете модель:</label>
       <select id="options" value={pickModel} onChange={setPickModelTir}>
 
         <option value="">--Выберите--</option>

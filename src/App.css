@@ -155,3 +155,25 @@ h2 {
   color: #f3d3d3;
   filter: drop-shadow(3px 3px 10px rgb(92, 181, 63))
 }
+
+.addIcebox {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 550px;
+}
+
+.camera {
+  width: 300px;
+  height: 430px;
+
+}
+
+.chic {
+  display: flex;
+
+  margin: 0 auto;
+
+}

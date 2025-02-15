@@ -49,7 +49,7 @@ const CameraApp = ({ previewPhoto, setPreviewPhoto }) => {
       <video className='camera' ref={videoRef} autoPlay > </video>
 
 
-      <button style={{ width: '50px', height: '50px', borderRadius: '50%' }} className='chic' onClick={takePhoto}> &#9675;</button>
+      <button style={{ width: '50px', height: '50px', borderRadius: '50%' }} className='chic' onClick={takePhoto}> </button>
 
 
 
