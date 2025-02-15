@@ -1,7 +1,10 @@
 import React from 'react'
 
 
-const IceboxStats = () => {
+const IceboxStats = ({ pickIcebox, setPickIcebox }) => {
+
+
+
 
 
   return (<table className="stats">
@@ -29,7 +32,10 @@ const IceboxStats = () => {
       <td>Глубина</td>
       <td> 60</td>
     </tr>
-    <button className="button">забронировать</button>
+
+
+    <button className="button" style={pickIcebox ? { backgroundColor: 'red' } : {}} onClick={() => setPickIcebox(true)} >{pickIcebox ? 'забронирован' : 'забронировать'}</button>
+
   </table>)
 };
 export default IceboxStats;

@@ -61,10 +61,11 @@ li {
 
 }
 
-/* .h_o img{
+.h_o img {
   height: 100%;
   width: 100%;
-} */
+}
+
 .stats {
   width: 100%;
 }
@@ -77,6 +78,7 @@ table {
 }
 
 th, td {
+  color: #f3f5f3;
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #302f2f;

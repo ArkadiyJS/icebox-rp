@@ -12,6 +12,9 @@ function App() {
 
   const [show2, setShow2] = useState(false);
 
+
+  const [pickIcebox, setPickIcebox] = useState(false)
+
   return (
     <>
       <div className="App">
@@ -54,13 +57,14 @@ function App() {
         </div>
 
         <div className="Content">
-          <IceboxCard />
-          <IceboxCard />
-          <IceboxCard />
-          <IceboxCard />
+
+          <IceboxCard pickIcebox={pickIcebox} setPickIcebox={setPickIcebox} />
 
           {show2 ? (
             <div>
+
+
+
               <div>
                 <h2
                   style={{

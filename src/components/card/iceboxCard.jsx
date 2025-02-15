@@ -2,13 +2,16 @@ import React from "react";
 import IceboxStats from "./stats/iceboxStats";
 import Carousel from "./carousel/carousel";
 
-const IceboxCard = () => {
+const IceboxCard = ({ pickIcebox, setPickIcebox }) => {
   return (
-    <div className="icebox" >
-        {/* <div className="overlay"></div> */}
+    <div className="icebox" style={pickIcebox ? { opacity: '0.6', textDecoration: 'line-through', textDecorationColor: 'red' } : {}} >
+
+
+
       <Carousel />
 
-      <IceboxStats />
+      <IceboxStats pickIcebox={pickIcebox} setPickIcebox={setPickIcebox} />
+
     </div>
   );
 };
