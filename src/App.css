@@ -1,71 +1,383 @@
 .App {
-  display: grid;
-  width: 1200px;
-  height: 97vh;
+  width: 100%;
   margin: 0 auto;
-  grid-gap: 5px;
-  grid-template-rows: 150px 1fr;
-  grid-template-columns: 200px 1fr;
-  grid-template-areas:
-    'h h'
-    'n c';
+  width: 100%;
+  height: 100%;
 }
 
-.Header {
-  display: flex;
-  grid-area: h;
-  margin: 0 auto;
+.card {
+  display: grid;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
-  width: 1200px;
-  height: 150px;
-
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 40% 1fr;
+  border: 3px solid black;
+  grid-template-areas:
+    'carusel'
+    'stats'
+    'b';
+  width: 100%;
+  height: 600px;
 }
 
-.Navbar {
-  grid-area: n;
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    display: grid;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
 
-  width: 200px;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 40% 1fr;
 
+    grid-template-areas:
+      'carusel'
+      'stats'
+      'b';
+    border: 3px solid black;
+    max-width: 480px;
+
+    height: 600px;
+  }
+
+  /* CSS для маленьких экранов телефонов */
 }
 
+@media (max-width: 600px) {
+  /* CSS для телефонов, в том числе больших моделей */
+}
 
-.Content {
+@media (min-width: 601px) and (max-width: 900px) {
+  .card {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+      'carusel stats'
+      'b b';
+    height: 300px;
+    width: 100%;
+  }
 
-  grid-area: c;
+  /* CSS для планшетов (портрет) */
+}
+
+@media (min-width: 901px) and (max-width: 1018px) {
+  .card {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+      'carusel stats'
+      'b b';
+    height: 300px;
+    width: 100%;
+  }
+
+  /* CSS для планшетов (ландшафт) */
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .card {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+      'carusel stats'
+      'b b';
+    height: 300px;
+    width: 100%;
+  }
+
+  /* CSS для ноутбуков */
+}
+
+@media (min-width: 1441px) {
+  .App {
+    display: grid;
+  }
+
+  /* CSS для больших десктопов */
+  .card {
+    position: relative;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+      'carusel stats'
+      'b b';
+    height: 300px;
+    width: 1200px;
+  }
+}
+
+.bronirovka {
+  grid-area: b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 100%;
   height: 100%;
-
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: chartreuse;
 }
 
-li {
-  background-color: #302f2f;
-  color: #f1f1f1;
-  margin-top: 5px;
-  border: 1px solid black;
+.carusel {
+  grid-area: carusel;
+  justify-content: center;
+
+  align-items: center;
+
+  width: 100%;
+  max-width: 266px;
+}
+
+.carusel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.statsCard {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  grid-area: stats;
+}
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 1;
+  background-color: #a7761c;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 1;
+  background-color: #a7761c;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbarBtn {
+  background-color: #805b17;
+  /* Green */
+  border: none;
+  width: 100%;
+  padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  /* Центр по горизонтали */
+  align-items: center;
+  /* Центр по вертикали */
+}
+
+.circleBG {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  /* Ширина полукруга */
+  height: 60px;
+  background-color: #a7761c;
+  /* Цвет полукруга */
+  border-bottom-right-radius: 55px 55px;
+  /* Скругляем только правый нижний угол */
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.box {
+  position: fixed;
+
+  border-radius: 50%;
+
+  top: 25px;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 18px;
+  z-index: 9;
   cursor: pointer;
 }
 
-.icebox {
-
-  display: grid;
-  grid-template-columns: 30% 1fr;
-  margin-top: 20px;
-  height: 320px;
+span {
+  display: block;
   width: 100%;
-  color: white;
-
-  border: 1.5px solid black;
-  border-radius: 4px;
-
+  box-shadow: 0 1.5px 7px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  height: 6px;
+  background: #fff;
+  transition: all 0.3s;
+  position: relative;
 }
 
-.h_o img {
-  height: 100%;
-  width: 100%;
+span+span {
+  margin-top: 10px;
 }
 
+.active span:nth-child(1) {
+  animation: ease 0.7s top forwards;
+}
+
+.not-active span:nth-child(1) {
+  animation: ease 0.7s top-2 forwards;
+}
+
+.active span:nth-child(2) {
+  animation: ease 0.7s scaled forwards;
+}
+
+.not-active span:nth-child(2) {
+  animation: ease 0.7s scaled-2 forwards;
+}
+
+.active span:nth-child(3) {
+  animation: ease 0.7s bottom forwards;
+}
+
+.not-active span:nth-child(3) {
+  animation: ease 0.7s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  50% {
+    top: 16px;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 16px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 16px;
+    transform: rotate(45deg);
+  }
+
+  50% {
+    top: 16px;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+
+  50% {
+    bottom: 16px;
+    transform: rotate(0);
+  }
+
+  100% {
+    bottom: 16px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 16px;
+    transform: rotate(135deg);
+  }
+
+  50% {
+    bottom: 16px;
+    transform: rotate16px;
+  }
+
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* работа с характеристиками */
 .stats {
   width: 100%;
 }
@@ -77,25 +389,22 @@ table {
   font-family: Arial, sans-serif;
 }
 
-th, td {
-  color: #f3f5f3;
-  padding: 12px;
+th,
+td {
+  padding: 8px;
   text-align: left;
   border-bottom: 1px solid #302f2f;
 }
 
-th {
-  background-color: #4CAF50;
-  color: white;
-}
+th {}
 
 tr:hover {
-  background-color: #a89d9d;
+  background-color: #68ad57;
 }
 
-.button {
+.buttonStats {
   width: 90%;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   /* Зелёный фон */
   color: white;
   /* Белый текст */
@@ -111,69 +420,13 @@ tr:hover {
   /* Размер шрифта */
   margin: 4px 2px;
   /* Отступы вокруг кнопки */
-  transition: background-color 0.3s, transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
   /* Плавный переход при наведении */
   border: none;
   /* Убираем границы */
   border-radius: 4px;
   /* Закругленные углы */
   cursor: pointer;
-}
-
-.button:hover {
-  background-color: #45a049;
-  /* Более темный зелёный при наведении */
-  transform: translateY(-2px);
-  /* Поднимаем кнопку при наведении */
-}
-
-.button:active {
-  background-color: #3e8e41;
-  /* Ещё более тёмный цвет при нажатии */
-  transform: translateY(0);
-  /* Возвращаем на место при отпускании */
-}
-
-
-
-h2 {
-  font-family: 'Arial', sans-serif;
-  font-size: 2em;
-  color: #f3f5f3;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0;
-  padding: 10px;
-  background: linear-gradient(90deg, #72e44f, #4CAF50);
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-  font-size: 158px;
-  color: #f3d3d3;
-  filter: drop-shadow(3px 3px 10px rgb(92, 181, 63))
-}
-
-.addIcebox {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 300px;
-  height: 550px;
-}
-
-.camera {
-  width: 300px;
-  height: 430px;
-
-}
-
-.chic {
-  display: flex;
-
-  margin: 0 auto;
-
 }

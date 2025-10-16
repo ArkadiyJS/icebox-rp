@@ -1,8 +1,18 @@
+* {
+  padding: 0px;
+  margin: 0 auto;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url('./assets/background.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('https://wallpapers.com/images/hd/youtube-thumbnail-orange-bokeh-pliyj592y59o4nam.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
 }

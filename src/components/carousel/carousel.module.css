@@ -7,12 +7,9 @@
 
 .carouselImages {
   display: flex;
+
   transition: transform 0.5s ease-in-out;
 }
-
-
-
-
 
 .prev {
   position: absolute;
