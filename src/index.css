@@ -13,6 +13,6 @@
 body {
   background-image: url('https://wallpapers.com/images/hd/youtube-thumbnail-orange-bokeh-pliyj592y59o4nam.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
 }

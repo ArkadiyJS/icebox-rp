@@ -141,7 +141,6 @@
   justify-content: center;
 
   align-items: center;
-
   width: 100%;
   max-width: 266px;
 }
@@ -257,7 +256,7 @@ span {
   position: relative;
 }
 
-span+span {
+span + span {
   margin-top: 10px;
 }
 
@@ -396,7 +395,8 @@ td {
   border-bottom: 1px solid #302f2f;
 }
 
-th {}
+th {
+}
 
 tr:hover {
   background-color: #68ad57;
@@ -420,9 +420,7 @@ tr:hover {
   /* Размер шрифта */
   margin: 4px 2px;
   /* Отступы вокруг кнопки */
-  transition:
-    background-color 0.3s,
-    transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   /* Плавный переход при наведении */
   border: none;
   /* Убираем границы */
