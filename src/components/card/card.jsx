@@ -19,7 +19,7 @@ const Card = ({ id, name, height, width, depth, polki, image }) => {
           polki={polki}
         />
       </div>
-      <button className="bronirovka">забронировать</button>
+      {/* <button className="bronirovka">забронировать</button> */}
     </div>
   );
 };
