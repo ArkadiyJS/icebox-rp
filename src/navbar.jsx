@@ -1,17 +1,48 @@
 import React from 'react';
 
-const Navbar = ({ showModal }) => {
+const Navbar = ({
+  showModal,
+  setShowModal,
+  SetFiltersMin,
+  SetFiltersMax,
+  setNewIceBox,
+}) => {
+  // филтры по ширине холодильников
+  const widthOneDoorboxMin = 590;
+  const widthOneDoorboxMax = 755;
+
+  const widthOneAndHalfDoorMin = 900;
+  const widthOneAndHalfDoorMax = 1030;
+
+  const widthTwoDoorMin = 1170;
+  const widthTwoDoorMax = 1370;
+
+  const allIceBoxMin = 1;
+  const allIceBoxMax = 2000;
+
   return (
     <div className={`navbar  ${showModal ? `open` : ''}`}>
       <div style={{ marginTop: '50px' }}>
         <h3>б/у</h3>
         <button
+          onClick={() => {
+            SetFiltersMin(widthOneDoorboxMin),
+              SetFiltersMax(widthOneDoorboxMax),
+              setShowModal(false),
+              setNewIceBox(false);
+          }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
         >
           одно-дверные
         </button>
         <button
+          onClick={() => {
+            SetFiltersMin(widthTwoDoorMin),
+              SetFiltersMax(widthTwoDoorMax),
+              setShowModal(false),
+              setNewIceBox(false);
+          }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
         >
@@ -19,6 +50,12 @@ const Navbar = ({ showModal }) => {
         </button>
 
         <button
+          onClick={() => {
+            SetFiltersMin(widthOneAndHalfDoorMin),
+              SetFiltersMax(widthOneAndHalfDoorMax),
+              setShowModal(false),
+              setNewIceBox(false);
+          }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
         >
@@ -28,13 +65,40 @@ const Navbar = ({ showModal }) => {
 
       <div style={{ marginTop: '50px' }}>
         <h3>Новые</h3>
-        <button className="navbarBtn" style={{ marginTop: '5px' }}>
+        <button
+          onClick={() => {
+            SetFiltersMin(widthOneDoorboxMin),
+              SetFiltersMax(widthOneDoorboxMax),
+              setShowModal(false),
+              setNewIceBox(true);
+          }}
+          className="navbarBtn"
+          style={{ marginTop: '5px' }}
+        >
           одно-дверные
         </button>
-        <button className="navbarBtn" style={{ marginTop: '5px' }}>
+        <button
+          onClick={() => {
+            SetFiltersMin(widthTwoDoorMin),
+              SetFiltersMax(widthTwoDoorMax),
+              setShowModal(false),
+              setNewIceBox(true);
+          }}
+          className="navbarBtn"
+          style={{ marginTop: '5px' }}
+        >
           двух-дверные
         </button>
-        <button className="navbarBtn" style={{ marginTop: '5px' }}>
+        <button
+          onClick={() => {
+            SetFiltersMin(widthOneAndHalfDoorMin),
+              SetFiltersMax(widthOneAndHalfDoorMax),
+              setShowModal(false),
+              setNewIceBox(true);
+          }}
+          className="navbarBtn"
+          style={{ marginTop: '5px' }}
+        >
           полтара-дверные
         </button>
       </div>

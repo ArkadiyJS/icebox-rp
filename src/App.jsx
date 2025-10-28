@@ -9,27 +9,41 @@ import Card from './components/card/card';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [filtersMin, SetFiltersMin] = useState(1);
+  const [filtersMax, SetFiltersMax] = useState(2000);
+  const [newIceBox, setNewIceBox] = useState(false);
+
   const data = dataIceBox;
-  console.log(data);
+  const filerData = data.filter(
+    (data) => data.width >= filtersMin && data.width <= filtersMax
+  );
 
   return (
     <div className="App">
-      {data.map((d) => (
-        <Card
-          key={d.id}
-          id={d.id}
-          name={d.name}
-          height={d.height}
-          width={d.width}
-          depth={d.depth}
-          polki={d.polki}
-          image={d.images}
-        />
-      ))}
+      {filerData
+        .filter((obj) => obj.new === newIceBox)
+        .map((d) => (
+          <Card
+            key={d.id}
+            id={d.id}
+            name={d.name}
+            height={d.height}
+            width={d.width}
+            depth={d.depth}
+            polki={d.polki}
+            image={d.images}
+          />
+        ))}
 
       <div className="circleBG"></div>
       <MenuBotton showModal={showModal} setShowModal={setShowModal} />
-      <Navbar showModal={showModal} />
+      <Navbar
+        setNewIceBox={setNewIceBox}
+        showModal={showModal}
+        setShowModal={setShowModal}
+        SetFiltersMin={SetFiltersMin}
+        SetFiltersMax={SetFiltersMax}
+      />
     </div>
   );
 }
