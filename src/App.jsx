@@ -3,31 +3,34 @@ import { useState } from 'react';
 import './App.css';
 import MenuBotton from './components/MenuBotton';
 import Navbar from './navbar';
-import Carousel from './components/carousel/carousel';
-import IceboxStats from './components/stats/iceboxStats';
+
+import dataIceBox from './testDB';
+import Card from './components/card/card';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const data = dataIceBox;
+  console.log(data);
 
   return (
-    <>
-      <div className="App">
-        <div className="card">
-          <div className="carusel">
-            <Carousel />
-          </div>
+    <div className="App">
+      {data.map((d) => (
+        <Card
+          key={d.id}
+          id={d.id}
+          name={d.name}
+          height={d.height}
+          width={d.width}
+          depth={d.depth}
+          polki={d.polki}
+          image={d.images}
+        />
+      ))}
 
-          <div className="statsCard">
-            <IceboxStats />
-          </div>
-          <button className="bronirovka">забронировать</button>
-        </div>
-
-        <div className="circleBG"></div>
-        <MenuBotton showModal={showModal} setShowModal={setShowModal} />
-        <Navbar showModal={showModal} />
-      </div>
-    </>
+      <div className="circleBG"></div>
+      <MenuBotton showModal={showModal} setShowModal={setShowModal} />
+      <Navbar showModal={showModal} />
+    </div>
   );
 }
 

@@ -4,9 +4,9 @@ import icebox2 from '../.././assets/wintersCurse2.jpeg';
 import icebox3 from '../.././assets/wintersCurse3.jpeg';
 import s from './carousel.module.css';
 
-const Carousel = () => {
+const Carousel = ({ image }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [icebox, icebox2, icebox3];
+  const images = image;
 
   //   const images = [
   //     'https://avatars.mds.yandex.net/i?id=eefb4c166f681badd2c5a18bec425052ad48daca-7862872-images-thumbs&n=13',

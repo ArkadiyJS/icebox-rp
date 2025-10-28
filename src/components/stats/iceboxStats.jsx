@@ -1,35 +1,35 @@
 import React from 'react';
 
-const IceboxStats = () => {
+const IceboxStats = ({ name, id, height, width, depth, polki }) => {
   return (
     <table className="stats">
       <tr>
         <td>Серийный номер</td>
-        <td> 3567226е472</td>
+        <td> {id}</td>
       </tr>
 
       <tr>
         <td>Модель</td>
-        <td> s8</td>
+        <td> {name}</td>
       </tr>
 
       <tr>
         <td>Высота</td>
-        <td> 1950 мм</td>
+        <td> {height}</td>
       </tr>
 
       <tr>
         <td>Ширина</td>
-        <td> 650 мм</td>
+        <td> {width}</td>
       </tr>
 
       <tr>
         <td>Глубина</td>
-        <td> 600 мм</td>
+        <td> {depth}</td>
       </tr>
       <tr>
         <td>Кол-во полок</td>
-        <td> 4/5 + дно</td>
+        <td>{polki}</td>
       </tr>
     </table>
   );
