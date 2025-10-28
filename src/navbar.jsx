@@ -6,6 +6,8 @@ const Navbar = ({
   SetFiltersMin,
   SetFiltersMax,
   setNewIceBox,
+  active,
+  setActive,
 }) => {
   // филтры по ширине холодильников
   const widthOneDoorboxMin = 590;
@@ -29,7 +31,8 @@ const Navbar = ({
             SetFiltersMin(widthOneDoorboxMin),
               SetFiltersMax(widthOneDoorboxMax),
               setShowModal(false),
-              setNewIceBox(false);
+              setNewIceBox(false),
+              setActive(!active);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
@@ -41,7 +44,8 @@ const Navbar = ({
             SetFiltersMin(widthTwoDoorMin),
               SetFiltersMax(widthTwoDoorMax),
               setShowModal(false),
-              setNewIceBox(false);
+              setNewIceBox(false),
+              setActive(!active);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
@@ -54,7 +58,8 @@ const Navbar = ({
             SetFiltersMin(widthOneAndHalfDoorMin),
               SetFiltersMax(widthOneAndHalfDoorMax),
               setShowModal(false),
-              setNewIceBox(false);
+              setNewIceBox(false),
+              setActive(!active);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
@@ -70,7 +75,8 @@ const Navbar = ({
             SetFiltersMin(widthOneDoorboxMin),
               SetFiltersMax(widthOneDoorboxMax),
               setShowModal(false),
-              setNewIceBox(true);
+              setNewIceBox(true),
+              setActive(!active);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px' }}
@@ -82,7 +88,8 @@ const Navbar = ({
             SetFiltersMin(widthTwoDoorMin),
               SetFiltersMax(widthTwoDoorMax),
               setShowModal(false),
-              setNewIceBox(true);
+              setNewIceBox(true),
+              setActive(!active);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px' }}
@@ -94,7 +101,8 @@ const Navbar = ({
             SetFiltersMin(widthOneAndHalfDoorMin),
               SetFiltersMax(widthOneAndHalfDoorMax),
               setShowModal(false),
-              setNewIceBox(true);
+              setNewIceBox(true),
+              setActive(!active);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px' }}
@@ -102,6 +110,19 @@ const Navbar = ({
           полтара-дверные
         </button>
       </div>
+      <h3
+        onClick={() => {
+          setShowModal(false), setActive(!active);
+        }}
+        style={{
+          border: '1px solid black',
+          marginTop: '50px',
+          cursor: 'pointer',
+          textAlign: 'center',
+        }}
+      >
+        Таблица размеров Холодильного Оборудования
+      </h3>
     </div>
   );
 };

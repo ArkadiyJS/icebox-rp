@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-const MenuBotton = ({ showModal, setShowModal }) => {
-  const [active, setActive] = useState(false);
-
+const MenuBotton = ({ showModal, setShowModal, active, setActive }) => {
   const toggleActive = () => {
     setActive(!active);
     setShowModal(!showModal);
