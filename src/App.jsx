@@ -6,6 +6,8 @@ import Navbar from './navbar';
 
 import dataIceBox from './testDB';
 import Card from './components/card/card';
+import TableStats from './tablesStatsIceBox';
+import icebox from './db/icebox';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -14,6 +16,7 @@ function App() {
   const [newIceBox, setNewIceBox] = useState(false);
   const [active, setActive] = useState(false);
 
+  const dataTable = icebox;
   const data = dataIceBox;
   const filerData = data.filter(
     (data) => data.width >= filtersMin && data.width <= filtersMax
@@ -52,6 +55,20 @@ function App() {
         SetFiltersMin={SetFiltersMin}
         SetFiltersMax={SetFiltersMax}
       />
+
+      <div>
+        {dataTable.map((dataTable) => (
+          <TableStats
+            key={dataTable.name}
+            name={dataTable.name}
+            width={dataTable.width}
+            height={dataTable.height}
+            depth={dataTable.depth}
+            weight={dataTable.weight}
+            polki={dataTable.polki}
+          />
+        ))}
+      </div>
     </div>
   );
 }

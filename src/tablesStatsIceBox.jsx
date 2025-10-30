@@ -1,20 +1,13 @@
-import React from "react";
+import React from 'react';
 
-
-
-
-const TableStats =({name,height,width,depth,weight,polki}) =>{
-
-
-    return(
-        
-                
-                <tbody><td>{name}</td> <td>{height}mm</td> <td>{width}mm</td> <td>{depth}mm</td> <td>{weight}kg</td> <td>{polki}</td></tbody>
-        
-
-
-
-        )
-}
+const TableStats = ({ name, height, width, depth, weight, polki }) => {
+  return (
+    <tbody className="tableStatsAll">
+      <td>{name}</td> <td>{height}mm(высота)</td> <td>{width}mm(ширина)</td>{' '}
+      <td>{depth}mm(глубина)</td> <td>{weight}kg(вес)</td>{' '}
+      <td>кол-во полок: {polki}</td>
+    </tbody>
+  );
+};
 
 export default TableStats;

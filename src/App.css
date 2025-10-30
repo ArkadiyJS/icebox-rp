@@ -428,3 +428,9 @@ tr:hover {
   /* Закругленные углы */
   cursor: pointer;
 }
+.tableStatsAll:hover {
+  background-color: #4caf50;
+}
+.navbarBtn:hover {
+  background-color: #4caf50;
+}
