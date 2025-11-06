@@ -1,5 +1,5 @@
 import React from 'react';
-
+// TODO: сделать  таблицу в колонкуу когда ширина экрана меньше 700 пикселей
 const TableStats = ({ name, height, width, depth, weight, polki }) => {
   return (
     <tbody className="tableStatsAll">
