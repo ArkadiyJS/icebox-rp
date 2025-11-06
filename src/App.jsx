@@ -11,15 +11,15 @@ import icebox from './db/icebox';
 
 function App() {
   // стейт анимации и открывания навбар
-  const [showModal, setShowModal] = useState < Boolean > false;
-  const [active, setActive] = useState < Boolean > false;
+  const [showModal, setShowModal] = useState(false);
+  const [active, setActive] = useState(false);
 
   // стейт филтр ХО по ширине однушки двушки и полтарашки
-  const [filtersMin, SetFiltersMin] = useState < Number > 1;
-  const [filtersMax, SetFiltersMax] = useState < Number > 2000;
+  const [filtersMin, SetFiltersMin] = useState(1);
+  const [filtersMax, SetFiltersMax] = useState(2000);
 
   // фильтр новых хо
-  const [newIceBox, setNewIceBox] = useState < Boolean > false;
+  const [newIceBox, setNewIceBox] = useState(false);
 
   // константа для заполнении характеристик таблицы размеров
   const dataTable = icebox;
