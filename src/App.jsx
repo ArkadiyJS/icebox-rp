@@ -10,14 +10,24 @@ import TableStats from './tablesStatsIceBox';
 import icebox from './db/icebox';
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  const [filtersMin, SetFiltersMin] = useState(1);
-  const [filtersMax, SetFiltersMax] = useState(2000);
-  const [newIceBox, setNewIceBox] = useState(false);
-  const [active, setActive] = useState(false);
+  // стейт анимации и открывания навбар
+  const [showModal, setShowModal] = useState < Boolean > false;
+  const [active, setActive] = useState < Boolean > false;
 
+  // стейт филтр ХО по ширине однушки двушки и полтарашки
+  const [filtersMin, SetFiltersMin] = useState < Number > 1;
+  const [filtersMax, SetFiltersMax] = useState < Number > 2000;
+
+  // фильтр новых хо
+  const [newIceBox, setNewIceBox] = useState < Boolean > false;
+
+  // константа для заполнении характеристик таблицы размеров
   const dataTable = icebox;
+
+  // мок дата что прийдет с сервера
   const data = dataIceBox;
+
+  // функция фильттрации хо по ширине
   const filerData = data.filter(
     (data) => data.width >= filtersMin && data.width <= filtersMax
   );
