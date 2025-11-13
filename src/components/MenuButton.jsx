@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MenuBotton = ({ showModal, setShowModal, active, setActive }) => {
+const MenuButton = ({ showModal, setShowModal, active, setActive }) => {
   const toggleActive = () => {
     setActive(!active);
     setShowModal(!showModal);
