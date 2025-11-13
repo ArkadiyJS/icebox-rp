@@ -343,7 +343,7 @@ span + span {
 
   50% {
     bottom: 16px;
-    transform: rotate16px;
+    transform: rotate(0);
   }
 
   100% {
@@ -395,8 +395,7 @@ td {
   border-bottom: 1px solid #302f2f;
 }
 
-th {
-}
+
 
 tr:hover {
   background-color: #68ad57;

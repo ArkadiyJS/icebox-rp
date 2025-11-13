@@ -21,4 +21,4 @@ const MenuButton = ({ showModal, setShowModal, active, setActive }) => {
   );
 };
 
-export default MenuBotton;
+export default MenuButton;

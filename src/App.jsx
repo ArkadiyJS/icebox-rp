@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import './App.css';
-import MenuBotton from './components/MenuBotton';
+import MenuBotton from './components/MenuButton';
 import Navbar from './navbar';
 
 import dataIceBox from './testDB';

@@ -28,11 +28,11 @@ const Navbar = ({
         <h3>б/у</h3>
         <button
           onClick={() => {
-            SetFiltersMin(widthOneDoorboxMin),
-              SetFiltersMax(widthOneDoorboxMax),
-              setShowModal(false),
-              setNewIceBox(false),
-              setActive(!active);
+            SetFiltersMin(widthOneDoorboxMin);
+              SetFiltersMax(widthOneDoorboxMax);
+              setShowModal(false);
+              setNewIceBox(false);
+              setActive(prev=>!prev);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
@@ -41,11 +41,11 @@ const Navbar = ({
         </button>
         <button
           onClick={() => {
-            SetFiltersMin(widthTwoDoorMin),
-              SetFiltersMax(widthTwoDoorMax),
-              setShowModal(false),
-              setNewIceBox(false),
-              setActive(!active);
+            SetFiltersMin(widthTwoDoorMin);
+              SetFiltersMax(widthTwoDoorMax);
+              setShowModal(false);
+              setNewIceBox(false);
+              setActive(prev=>!prev);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
@@ -55,11 +55,11 @@ const Navbar = ({
 
         <button
           onClick={() => {
-            SetFiltersMin(widthOneAndHalfDoorMin),
-              SetFiltersMax(widthOneAndHalfDoorMax),
-              setShowModal(false),
-              setNewIceBox(false),
-              setActive(!active);
+            SetFiltersMin(widthOneAndHalfDoorMin);
+              SetFiltersMax(widthOneAndHalfDoorMax);
+              setShowModal(false);
+              setNewIceBox(false);
+              setActive(prev=>!prev);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px', border: '1px solid black' }}
@@ -72,11 +72,11 @@ const Navbar = ({
         <h3>Новые</h3>
         <button
           onClick={() => {
-            SetFiltersMin(widthOneDoorboxMin),
-              SetFiltersMax(widthOneDoorboxMax),
-              setShowModal(false),
-              setNewIceBox(true),
-              setActive(!active);
+            SetFiltersMin(widthOneDoorboxMin);
+              SetFiltersMax(widthOneDoorboxMax);
+              setShowModal(false);
+              setNewIceBox(true);
+              setActive(prev=>!prev);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px' }}
@@ -85,11 +85,11 @@ const Navbar = ({
         </button>
         <button
           onClick={() => {
-            SetFiltersMin(widthTwoDoorMin),
-              SetFiltersMax(widthTwoDoorMax),
-              setShowModal(false),
-              setNewIceBox(true),
-              setActive(!active);
+            SetFiltersMin(widthTwoDoorMin);
+              SetFiltersMax(widthTwoDoorMax);
+              setShowModal(false);
+              setNewIceBox(true);
+              setActive(prev=>!prev);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px' }}
@@ -98,11 +98,11 @@ const Navbar = ({
         </button>
         <button
           onClick={() => {
-            SetFiltersMin(widthOneAndHalfDoorMin),
-              SetFiltersMax(widthOneAndHalfDoorMax),
-              setShowModal(false),
-              setNewIceBox(true),
-              setActive(!active);
+            SetFiltersMin(widthOneAndHalfDoorMin);
+              SetFiltersMax(widthOneAndHalfDoorMax);
+              setShowModal(false);
+              setNewIceBox(true);
+              setActive(prev=>!prev);
           }}
           className="navbarBtn"
           style={{ marginTop: '5px' }}
@@ -112,7 +112,7 @@ const Navbar = ({
       </div>
       <h3
         onClick={() => {
-          setShowModal(false), setActive(!active);
+          setShowModal(false), setActive(prev=>!prev);
         }}
         style={{
           border: '1px solid black',
